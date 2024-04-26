@@ -1,0 +1,84 @@
+body {
+  background-color: black;
+}
+
+.ball {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 100%;
+}
+
+.container {
+  background-color: antiquewhite;
+  width: 200px;
+  height: 200px;
+  margin-left: 35%;
+  transition: width 3s, height 3s, transform 5s;
+  position: relative;
+}
+
+.container:hover {
+  width: 400px;
+  height: 400px;
+  transform: rotateZ(180deg);
+}
+
+.orange {
+  background-color: orange;
+  height: 7rem;
+  width: 7rem;
+  position: relative;
+}
+
+.white {
+  background-color: white;
+  animation: whiteToBlue 5s infinite, slideUpDown 10s infinite;
+}
+
+.yellow {
+  animation: yellowToPurpule 5s infinite, slideLeftRight 10s infinite;
+}
+
+@keyframes whiteToBlue {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes yellowToPurpule {
+  0% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blueviolet;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes slideLeftRight {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(1270px);
+  }
+}
+
+@keyframes slideUpDown {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(650px);
+  }
+}
